@@ -20,12 +20,12 @@ public class CommandLineApp implements CommandLineRunner {
 
     @Override
     @Transactional
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         var names = List.of("Alexey", "Vasya", "Ivan", "Petya", "Oleg", "Sidor");
         var surnames = List.of("Ivanov", "Petrov", "Sidorov", "Vasilev");
         var cities = List.of("MSK", "NN", "StP");
         var random = new Random();
-        IntStream.range(0, 20)
+        IntStream.range(0, 10)
                 .forEach(i -> {
                     var persons = Persons.builder()
                             .person(Person.builder()
